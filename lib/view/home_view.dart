@@ -13,8 +13,9 @@ class HomeView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
-        body: controller.screenList[controller.currentIndex
-            .value], // Display the screen based on the selected index
+        body:Obx((){
+          return controller.screenList[controller.currentIndex.value];
+        }),// Display the screen based on the selected index
         bottomNavigationBar: Obx(() {
           return Stack(
             clipBehavior: Clip.none,
@@ -95,7 +96,7 @@ class HomeView extends StatelessWidget {
                                 spreadRadius:0, // Ensures the shadow doesn't grow beyond its offset
                               ),
                             ],
-                            border: Border.all(color: Colors.white, width: 5)),
+                            border: Border.all(color: Colors.white, width:5)),
                         child: Icon(
                           Icons.add,
                           color: Colors.white,

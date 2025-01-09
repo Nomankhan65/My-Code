@@ -1,0 +1,36 @@
+{
+  "login": {
+    "success": {
+      "status": "success",
+      "message": "OTP sent successfully",
+      "otp_expiry": 120
+    },
+    "error": {
+      "status": "error",
+      "message": "Invalid phone number or terms not agreed"
+    }
+  },
+  "verifyOtp": {
+    "success": {
+      "status": "success",
+      "message": "Login successful",
+      "user_id": "12345",
+      "auth_token": "abcd1234efgh5678"
+    },
+    "error": {
+      "status": "error",
+      "message": "Invalid OTP or OTP expired"
+    }
+  },
+  "resendOtp": {
+    "success": {
+      "status": "success",
+      "message": "New OTP sent successfully",
+      "otp_expiry": 120
+    },
+    "error": {
+      "status": "error",
+      "message": "Failed to resend OTP. Please try again later."
+    }
+  }
+}
